@@ -68,15 +68,6 @@ document.addEventListener("DOMContentLoaded", () => {
         revealOnScroll.observe(reveal);
     });
 
-    // 4. Mouse Glow Effect
-    const cursorGlow = document.getElementById('cursor-glow');
-    if(cursorGlow) {
-        document.addEventListener('mousemove', (e) => {
-            cursorGlow.style.top = (e.clientY - 150) + 'px';
-            cursorGlow.style.left = (e.clientX - 150) + 'px';
-        });
-    }
-
     // 5. Typewriter Effect
     const words = ["Pod Lead", "Dashboard Expert", "Data Architect", "Actionable Thinker"];
     let i = 0;
