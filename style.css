@@ -526,24 +526,32 @@ ul {
 /* Special Layout for the Large Featured Project (Tableau) */
 .project-card.large {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; /* Stack top-to-bottom instead of side-by-side */
     overflow: visible; /* Ensure dashboard doesn't get clipped */
 }
 
 /* Ensure Left Info scales, then right scaling next */
 .project-card.large .project-info {
-    flex: 1;
-    min-width: 300px;
+    width: 100%;
     padding: 3rem;
+    padding-bottom: 1.5rem; /* Less padding before the dashboard */
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
 .project-card.large .project-media {
-    flex: 2; /* takes up 2/3 of space */
-    min-width: 400px; /* Don't crush the dashboard horizontally */
+    width: 100%;
     overflow: visible;
+}
+
+/* Increase container width so dashboard fits nicely */
+.projects-container {
+    max-width: 1250px; /* Widened from 1100px */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 .project-info, .project-content {
