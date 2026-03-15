@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <!-- Background Mouse Glow -->
+    <div id="cursor-glow"></div>
+
     <!-- Navigation -->
     <nav id="navbar" class="navbar">
         <div class="nav-container border-b glass">
@@ -35,7 +38,7 @@
         <div class="hero-content reveal">
             <p class="greeting">Hi, I'm</p>
             <h1 class="name">Declan Rhys Dkharphanbuh</h1>
-            <h2 class="title">Data Analyst & Pod Lead</h2>
+            <h2 class="title" style="min-height: 40px;">Data Analyst & <span id="typewriter" class="text-gradient"></span><span class="blinking-cursor">|</span></h2>
             <p class="hero-description">
                 Transforming raw data into predictive, actionable insights. I specialize in <span class="highlight">SQL, Python, and BI Tools</span> to drive strategic business growth through analytics.
             </p>
@@ -56,14 +59,14 @@
             <div class="glass-card stat-card">
                 <i class="fas fa-chart-line"></i>
                 <div>
-                    <h3>99%+</h3>
+                    <h3><span class="counter" data-target="99">0</span>%+</h3>
                     <p>Data Accuracy</p>
                 </div>
             </div>
             <div class="glass-card tool-card">
                 <i class="fas fa-database"></i>
                 <div>
-                    <h3>100K+</h3>
+                    <h3><span class="counter" data-target="100">0</span>K+</h3>
                     <p>Records Validated</p>
                 </div>
             </div>
