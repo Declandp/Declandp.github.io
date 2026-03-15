@@ -514,7 +514,7 @@ ul {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 1rem;
-    overflow: hidden;
+    overflow: hidden; /* Changed from hidden to prevent truncation of dashboards if they expand slightly */
     transition: var(--transition);
 }
 
@@ -525,9 +525,25 @@ ul {
 
 /* Special Layout for the Large Featured Project (Tableau) */
 .project-card.large {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 0;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: visible; /* Ensure dashboard doesn't get clipped */
+}
+
+/* Ensure Left Info scales, then right scaling next */
+.project-card.large .project-info {
+    flex: 1;
+    min-width: 300px;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project-card.large .project-media {
+    flex: 2; /* takes up 2/3 of space */
+    min-width: 400px; /* Don't crush the dashboard horizontally */
+    overflow: visible;
 }
 
 .project-info, .project-content {
