@@ -819,10 +819,6 @@ ul {
         display: none; /* Hide graphics on small screens for simplicity */
     }
 
-    .project-card.large {
-        grid-template-columns: 1fr;
-    }
-
     .graphic-placeholder {
         min-height: 250px;
         border-left: none;
